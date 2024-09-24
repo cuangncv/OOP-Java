@@ -3,7 +3,11 @@ import java.util.*;
 public class J03020_TIM_TU_THUAN_NGHICH_DAI_NHAT {
     public static void main (String [] args){
         Scanner in = new Scanner(System.in);
-        String s = in.nextLine();
+        String s = "";
+        while(in.hasNextLine()) {
+            s += in.nextLine();
+            s += " ";
+        }
         String [] a = s.trim().split("\\s+");
         timTu(a);
         in.close();
@@ -29,7 +33,7 @@ public class J03020_TIM_TU_THUAN_NGHICH_DAI_NHAT {
             }
         }
         for(Map.Entry<String,Integer> entry : mp.entrySet()){
-            System.out.print(entry.getKey()+" "+entry.getValue()+" ");
+            System.out.println(entry.getKey()+" "+entry.getValue());
         }
     }
     public static boolean thuanNghich (String p){
